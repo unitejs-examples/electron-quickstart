@@ -3,7 +3,7 @@
 This should perform the following steps with travis:
 
 * Install the Unite JS CLI tool
-* Generate an app
+* Generate an app with AngularJavaScript Profile
 * Generate a class
 * Add electron as a target platform
 * Add a client package of moment
