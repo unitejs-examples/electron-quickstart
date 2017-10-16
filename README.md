@@ -8,7 +8,7 @@ This should perform the following steps with travis:
 * Add electron as a target platform
 * Add a client package of moment
 * Build (Development)
-* Unit Test
+* Unit Test (Development)
 * E2E Test (Development)
 * Build (Production)
 * E2E Test (Production)
