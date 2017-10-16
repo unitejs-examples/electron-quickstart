@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "node"
+before_install:
+  - npm install -g unitejs-cli@1.2.7
+  - unite configure --profile=AngularJavaScript --title="Electron QuickStart" --packageName=unitejs-electron-quickstart --outputDirectory=./
+  - unite generate --name=myClass --type=component
+  - unite platform --operation=add --platformName=Electron
+  - unite clientPackage --operation=add --packageName=moment
+  - cd www
+install:
+  - npm install -g gulp
+  - npm install
+script: 
+  - gulp build || travis_terminate 1
+  - gulp unit || travis_terminate 1
+  - gulp e2e-install || travis_terminate 1
+  - gulp e2e || travis_terminate 1
+  - gulp build --buildConfiguration=prod || travis_terminate 1
+  - gulp e2e || travis_terminate 1
+  - gulp platform-electron-dev
+  - gulp platform-web-package --buildConfiguration=prod
+  - gulp platform-electron-package --buildConfiguration=prod
+cache:
+  directories:
+  - www/node_modules
