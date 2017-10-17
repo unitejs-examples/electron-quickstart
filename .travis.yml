@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "node"
 before_install:
-  - npm install -g unitejs-cli@1.2.7
+  - npm install -g unitejs-cli@1.2.9
   - npm install -g gulp
   - unite configure --profile=AngularTypeScript --title="Electron QuickStart" --packageName=unitejs-electron-quickstart --outputDirectory=./
   - unite platform --operation=add --platformName=Electron
