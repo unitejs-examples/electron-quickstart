@@ -14,9 +14,9 @@ script:
   - gulp unit || travis_terminate 1
   - gulp e2e-install || travis_terminate 1
   - gulp e2e || travis_terminate 1
+  - gulp platform-electron-dev
   - gulp build --buildConfiguration=prod || travis_terminate 1
   - gulp e2e || travis_terminate 1
-  - gulp platform-electron-dev
   - gulp platform-electron-package --buildConfiguration=prod
 cache:
   directories:
