@@ -12,3 +12,8 @@ This should perform the following steps with travis:
 * E2E Test (Production)
 * Platform Electron create dev wrapper
 * Platform Package for Electron
+
+[![Build Status][travis-image]][travis-url]
+
+[travis-url]: https://travis-ci.org/unitejs-examples/electron-quickstart/
+[travis-image]: http://img.shields.io/travis/unitejs-examples/electron-quickstart/master.svg?style=flat
