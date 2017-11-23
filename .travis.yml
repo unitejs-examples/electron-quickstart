@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "8"
 before_install:
-  - npm install -g unitejs-cli@1.6.2
+  - npm install -g unitejs-cli
   - npm install -g gulp
   - unite configure --profile=AngularTypeScript --title="Electron QuickStart" --packageName=unitejs-electron-quickstart --outputDirectory=./
   - unite platform --operation=add --platformName=Electron
@@ -18,6 +18,3 @@ script:
   - gulp build --buildConfiguration=prod || travis_terminate 1
   - gulp e2e || travis_terminate 1
   - gulp platform-electron-package --buildConfiguration=prod || travis_terminate 1
-cache:
-  directories:
-  - www/node_modules
