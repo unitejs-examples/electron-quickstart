@@ -12,7 +12,7 @@ install:
 script: 
   - gulp build || travis_terminate 1
   - gulp unit || travis_terminate 1
-  - gulp e2e-install || travis_terminate 1
+  - gulp e2e-install --drivers=chrome || travis_terminate 1
   - gulp e2e || travis_terminate 1
   - gulp platform-electron-dev || travis_terminate 1
   - gulp build --buildConfiguration=prod || travis_terminate 1
