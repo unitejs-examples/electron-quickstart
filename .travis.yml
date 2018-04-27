@@ -1,7 +1,7 @@
 language: node_js
 sudo: required
 node_js:
-  - "8"
+  - 9
 before_install:
   - npm install -g unitejs-cli
   - npm install -g gulp
